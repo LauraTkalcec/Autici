@@ -7,6 +7,7 @@ public class KontrolaAuta : MonoBehaviour {
     public float carSpeed;
     public float MaxPos = 2.3f;
     Vector3 position;
+    public Rezultat UI;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +29,7 @@ public class KontrolaAuta : MonoBehaviour {
         if(col.gameObject.tag == "ProtivnickiAuto")
         {
             Destroy(gameObject);
+            UI.GameOverActivated();
         }
     }
 }
